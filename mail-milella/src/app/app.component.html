@@ -8,5 +8,9 @@
   <input type="corpo" #corpo> 
   <label for="corpo">Corpo</label> <br>
 
-  <button>Invia</button>
+  <button (click) = "nuovaMail(destinatario, oggetto, corpo)">Invia</button>
 </form>
+
+<div *ngfor=""let mail of vettore>
+  <app-sent-mail [mailozza] = 'mail'></app-sent-mail>
+</div>
